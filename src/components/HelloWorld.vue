@@ -31,14 +31,34 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
   },
   created(){
-    fetch('https://bio.torre.co/api/bios/josesanchez').then(response => response.json()).then(data => console.log(data));
-  }
+    // fetch('https://bio.torre.co/api/bios/josesanchez').then(response => response.json()).then(data => console.log(data));
+    const httpAxios = axios.create({
+      params: {},
+    })
+    httpAxios.get('https://bio.torre.co/api/bios/josesanchez').then((response) => {
+      console.log(response) 
+    })
+    const config = {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json' 
+      },
+    }
+    httpAxios.post('https://search.torre.co/opportunities/_search/?offset=1&size=5&aggregate=2', null, config).then((response) => {
+      console.log(response) 
+    })
+  },
+  methods: {
+    getexample(){
+    },
+  },
 }
 </script>
 

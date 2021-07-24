@@ -35,6 +35,9 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  created(){
+    fetch('https://bio.torre.co/api/bios/josesanchez').then(response => response.json()).then(data => console.log(data));
   }
 }
 </script>

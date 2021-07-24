@@ -1,0 +1,7 @@
+{
+  "init": {
+    "oauth": "/oauth/token",
+    "register": "/api/register/register/{usercode}/${mail}/${password}",
+    "create": "/api/register/create"
+  }
+}

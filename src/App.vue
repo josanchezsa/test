@@ -1,14 +1,5 @@
 <template lang="pug">
   v-app
-    v-app-bar(app='' color='primary' dark='')
-      .d-flex.align-center
-        v-img.shrink.mr-2(alt='Vuetify Logo' contain='' src='./assets/icons/torre.png' transition='scale-transition' width='40')
-        p Hola
-        v-img.shrink.mt-1.hidden-sm-and-down(alt='Vuetify Name' contain='' min-width='100' src='https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png' width='100')
-      v-spacer
-      v-btn(href='https://github.com/vuetifyjs/vuetify/releases/latest' target='_blank' text='')
-        span.mr-2 Latest Release
-        v-icon mdi-open-in-new
     v-main
       showData
 </template>
@@ -24,7 +15,22 @@ export default {
   },
 
   data: () => ({
-    //
   }),
 };
 </script>
+<style>
+@font-face {
+  font-family: "Montserrat-bold";
+  src: local("Montserrat-bold"),
+  url(./fonts/Montserrat-Bold.ttf) format("truetype");
+}  
+@font-face {
+  font-family: "Montserrat-semibold";
+  src: local("Montserrat-semibold"),
+  url(./fonts/Montserrat-SemiBold.ttf) format("truetype");
+}  
+.description{
+  font-family: "Montserrat-semibold";
+  font-size: 25px;
+}
+</style>
